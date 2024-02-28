@@ -7,7 +7,7 @@ import { MainShortcut } from '@/app/types';
 const Hero: React.FC<MainShortcut[]> = (data) => {
   return (
     <div className="mt-2 flex flex-wrap justify-between">
-      {data.data.map((item: MainShortcut, index: number) => {
+      {data?.data.map((item: MainShortcut, index: number) => {
         return (
           <div key={index} className="flex flex-col items-center">
             <NextImage

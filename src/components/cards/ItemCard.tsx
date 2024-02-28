@@ -12,8 +12,8 @@ interface ItemCardProps {
 }
 
 const ItemCard: React.FC<ItemCardProps> = ({ media, description, rating, otherprops }) => {
-  if (otherprops?.data?.items && otherprops?.data?.items.length > 0) {
-    console.log(otherprops?.data?.items.length);
+  if (otherprops?.data?.items) {
+    console.log(otherprops?.data);
   }
   return (
 
@@ -31,12 +31,12 @@ const ItemCard: React.FC<ItemCardProps> = ({ media, description, rating, otherpr
         <a href="#">
           <h5 className="mb-2 text-sm md:text-lg   tracking-tight text-gray-900 dark:text-white">{description}</h5>
         </a>
-        {/* <p className="mb-3 font-bold text-orange-500 dark:text-gray-400">{otherprops?.items.?.priceInfo?.discountRate}%, <span className='text-black'>{publication?.title}</span> </p> */}
+        <p className="mb-3 font-bold text-orange-500 dark:text-gray-400">{rating}%, <span className='text-black'>{otherprops?.data?.items[0]?.title}</span> </p>
 
         <div className='flex items-center text-gray-400 dark:text-gray-300 text-[15px]'>
           <FaStar />
 
-          {/* {rating > 0 && <span className="">{publication ? publication.rating : rating}</span>}   */}
+          {rating > 0 && <span className="">{otherprops?.data ? otherprops?.data?.rating : rating}</span>}
         </div>
 
       </div>

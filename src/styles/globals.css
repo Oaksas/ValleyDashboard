@@ -148,23 +148,22 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 33.33%; 
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5); 
   z-index: 2; 
 }
+
 .mySwiper::after {
   content: "";
   position: absolute;
   top: 0;
-  left: calc(33.33%);
-  width: 33.33%;
+  right: 0;
+  width: 33.33%; 
   height: 100%;
-  background-color: rgba(192, 34, 34, 0);
-  z-index: 3; 
+  background-color: rgba(255, 255, 255, 0.5); 
+  z-index: 2; 
 }
-
-
 
 
 .swiper-slide {
