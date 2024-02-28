@@ -1,4 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types */
+'use client';
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface ErrorBoundaryProps {
