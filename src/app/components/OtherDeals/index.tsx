@@ -5,7 +5,10 @@ import OtherDeals from '@/app/components/OtherDeals/OtherDeals';
 import { Deal } from '@/app/types';
 import { useSearch } from '@/context/SearchcontextProvide';
 
-export const DealsFilter: React.FC<Deal[]> = ({ deals }) => {
+type DealsFilterProps = {
+  deals: Deal[];
+};
+export const DealsFilter: React.FC<DealsFilterProps> = ({ deals }) => {
   let filteredData: any;
   const { searchTerm } = useSearch();
   if (searchTerm === '') {
