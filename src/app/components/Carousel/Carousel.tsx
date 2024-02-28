@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { Autoplay, Mousewheel, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,6 +12,7 @@ import Loading from '@/components/Loading';
 import NextImage from '@/components/NextImage';
 
 import { Banner, BannerCarouselProps } from '@/app/types/index';
+import { getImageUrl } from '@/app/util';
 
 const BannerCarousel: React.FC<BannerCarouselProps> = ({ data }) => {
   if (!data) {
@@ -38,13 +40,11 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ data }) => {
           <SwiperSlide key={index}>
             <NextImage
               useSkeleton={true}
-              src={
-                window.innerWidth < 768 ? item.mobileImageUrl : item.pcImageUrl
-              }
+              src={getImageUrl(item)}
               width="800"
               height="100"
               alt="Icon"
-              className="w-screen object-cover"
+              className="w-screen h-full object-cover"
             />
           </SwiperSlide>
         ))}

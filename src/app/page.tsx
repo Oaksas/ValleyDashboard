@@ -34,7 +34,7 @@ const HomePage = async () => {
       <Head>
         <title>TesValley</title>
       </Head>
-      <div className="mx-10 my-6">
+      <div className="mx-1 md:mx-10 my-6">
         <Navbar />
         <hr />
         {Bannerdata ? (

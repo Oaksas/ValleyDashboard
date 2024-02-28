@@ -9,9 +9,9 @@ import 'swiper/css/navigation';
 
 import '@/styles/globals.css';
 
-import NextImage from '@/components/NextImage';
 
 import { Deal } from '@/app/types';
+import ItemCard from '@/components/cards/ItemCard';
 const Hotdeal: React.FC<Deal> = (data) => {
   return (
     <div className="mt-4 grid grid-cols-3 gap-6">
@@ -40,14 +40,8 @@ const Hotdeal: React.FC<Deal> = (data) => {
         >
           {data.data?.media?.map((item: any, index: number) => (
             <SwiperSlide key={index}>
-              <NextImage
-                useSkeleton={true}
-                src={item.uri}
-                width="200"
-                height="100"
-                alt="Icon"
-                className=" object-cover"
-              />
+              <ItemCard media={item} description={data?.data.description} rating={data?.data.rating} publication={data?.data?.items?.publication} />
+
             </SwiperSlide>
           ))}
         </Swiper>
