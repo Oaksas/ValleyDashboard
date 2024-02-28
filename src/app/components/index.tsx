@@ -8,7 +8,7 @@ import { BannerCarouselProps } from '../types';
 
 type Color = (typeof colorList)[number];
 
-const ComponentPage: React.FC<BannerCarouselProps> = ({ data }) => {
+const ComponentPage: React.FC<BannerCarouselProps | any> = ({ data }) => {
   const [mode, setMode] = React.useState<'dark' | 'light'>('light');
 
 
