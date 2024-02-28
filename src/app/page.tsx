@@ -15,6 +15,7 @@ import {
   getShortcutData,
 } from '@/app/util/store';
 import { SearchProvider } from '@/context/SearchcontextProvide';
+import { DealsFilter } from '@/app/components/OtherDeals';
 
 const HomePage = async () => {
   let Bannerdata: BannerCarouselProps | null;
@@ -53,11 +54,9 @@ const HomePage = async () => {
           {HotdealData && <Hotdeal data={HotdealData.items[0]} />}
           {HotdealData?.items &&
             HotdealData.items.length > 0 &&
-            HotdealData.items
+            <DealsFilter deals={HotdealData.items
               .slice(1)
-              .map((item: any, index: number) => (
-                <OtherDeals key={index} data={item} />
-              ))}
+            } />}
         </div>
       </SearchProvider>
 

@@ -40,33 +40,81 @@ export interface Deal {
   title: string;
   subtitle: string;
   description: string;
-  trialPeriod: null | any; // Adjust the type accordingly
-  installmentPrice: null | any; // Adjust the type accordingly
-  installmentPeriod: null | any; // Adjust the type accordingly
+  trialPeriod: null | any;
+  installmentPrice: null | any;
+  installmentPeriod: null | any;
   rating: number;
-  startDate: null | string; // Adjust the type accordingly
-  endDate: null | string; // Adjust the type accordingly
-  viewType: null | any; // Adjust the type accordingly
+  startDate: null | string;
+  endDate: null | string;
+  viewType: null | any;
   createdAt: string;
-  items: any[]; // Adjust the type accordingly
+  items: Item[] | [];
   media: Media[];
+
   thumbnail: Media;
-  taggings: any[]; // Adjust the type accordingly
-  singleCollections: any[]; // Adjust the type accordingly
+  taggings: any[];
+  singleCollections: any[];
 }
 
+
+export interface Item {
+  createdAt: string;
+  updatedAt: string;
+  deletedAt: null | string;
+  uuid: string;
+  name: string;
+  body: null | string;
+  collectionId: number;
+  key: string;
+  seq: number;
+  entityType: string;
+  entityId: number;
+  optionKey: null | string;
+  publication: Publication;
+}
+
+export interface Publication {
+  id: number;
+  title: string;
+  code: string;
+  productId: number;
+  prdType: number;
+  detailEntity: string;
+  content: string;
+  offeringType: string;
+  rating: number;
+  isExistResidual: boolean;
+  isAdult: number;
+  preface: string;
+  prefaceIconUrl: string;
+  productName: string;
+  brandName: string;
+  media: Media[];
+  isTrial: boolean;
+  tagsOnImage: string[];
+  tagsOnDesc: string[];
+  priceInfo: PriceInfo;
+  discounts: any[];
+  applyCoupon: boolean;
+}
+
+export interface PriceInfo {
+  price: number;
+  couponDiscountPrice: number;
+  couponDiscountRate: number;
+}
 export interface Media {
   createdAt: string;
   updatedAt: string;
-  deletedAt: null | string; // Adjust the type accordingly
+  deletedAt: null | string;
   uuid: string;
   mimeType: string;
   uri: string;
   fileName: string;
   objectKey: string;
-  deviceType: null | any; // Adjust the type accordingly
+  deviceType: null | any;
   collectionId: number;
   seq: number;
-  itemKey: null | any; // Adjust the type accordingly
+  itemKey: null | any;
   type: string;
 }

@@ -13,6 +13,7 @@ import '@/styles/globals.css';
 import { Deal } from '@/app/types';
 import ItemCard from '@/components/cards/ItemCard';
 const Hotdeal: React.FC<Deal> = (data) => {
+
   return (
     <div className="mt-4 grid grid-cols-3 gap-6">
       <div className=" col-span-1 flex flex-col justify-between p-3">
@@ -38,9 +39,9 @@ const Hotdeal: React.FC<Deal> = (data) => {
           modules={[Navigation, Autoplay]}
           className="hotdealswiper"
         >
-          {data.data?.media?.map((item: any, index: number) => (
+          {data?.data?.media?.map((item: any, index: number) => (
             <SwiperSlide key={index}>
-              <ItemCard media={item} description={data?.data.description} rating={data?.data.rating} publication={data?.data?.items?.publication} />
+              <ItemCard media={item} description={data?.data?.description} rating={data?.data?.rating} priceInfo={data?.data?.items[0]?.publication?.priceInfo?.price} />
 
             </SwiperSlide>
           ))}

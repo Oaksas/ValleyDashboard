@@ -10,7 +10,15 @@ import 'swiper/css/navigation';
 import '@/styles/globals.css';
 
 import ItemCard from '@/components/cards/ItemCard';
+import { useSearch } from '@/context/SearchcontextProvide';
+
 const OtherDeals: React.FC<any> = (data) => {
+
+  console.log('f', data?.data);
+
+
+  // const filteredData = data?.data.filter((item) => item.type === searchTerm || item.viewType === searchTerm);
+
 
   return (
     <div className="mt-4 grid grid-cols-3 gap-6">
@@ -39,7 +47,7 @@ const OtherDeals: React.FC<any> = (data) => {
         >
           {data.data?.media?.map((item: any, index: number) => (
             <SwiperSlide key={index}>
-              <ItemCard media={item} description={data?.data.description} rating={data?.data.rating} otherprops={data} />
+              <ItemCard media={item} description={data?.data.description} rating={data?.data.rating} publication={data?.data?.items[0]?.publication} />
 
             </SwiperSlide>
           ))}
