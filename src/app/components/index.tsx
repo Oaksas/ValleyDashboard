@@ -11,12 +11,9 @@ type Color = (typeof colorList)[number];
 const ComponentPage: React.FC<BannerCarouselProps | any> = ({ data }) => {
   const [mode, setMode] = React.useState<'dark' | 'light'>('light');
 
-
   return (
     <main>
-      <section
-        className={clsx(mode === 'dark' ? 'bg-dark' : 'bg-white')}
-      >
+      <section className={clsx(mode === 'dark' ? 'bg-dark' : 'bg-white')}>
         <BannerCarousel data={data} />
       </section>
     </main>

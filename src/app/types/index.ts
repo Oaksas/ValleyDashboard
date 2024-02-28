@@ -56,7 +56,6 @@ export interface Deal {
   singleCollections: any[];
 }
 
-
 export interface Item {
   createdAt: string;
   updatedAt: string;

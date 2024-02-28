@@ -2,19 +2,19 @@ import React from 'react';
 
 const Hamburger: React.FC = () => {
   return (
-    <div className='text-[#00D093]'>
+    <div className="text-[#00D093]">
       <svg
-        xmlns='http://www.w3.org/2000/svg'
-        fill='none'
-        viewBox='0 0 24 24'
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
         strokeWidth={1.5}
-        stroke='currentColor'
-        className='w-5 h-5'
+        stroke="currentColor"
+        className="h-5 w-5"
       >
         <path
-          strokeLinecap='round'
-          strokeLinejoin='round'
-          d='M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5'
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
         />
       </svg>
     </div>

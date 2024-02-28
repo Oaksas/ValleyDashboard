@@ -1,4 +1,4 @@
-'use client'
+'use client';
 import React from 'react';
 import { Autoplay, Mousewheel, Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -44,7 +44,7 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ data }) => {
               width="800"
               height="100"
               alt="Icon"
-              className="w-screen h-full object-cover"
+              className="h-full w-screen object-cover"
             />
           </SwiperSlide>
         ))}

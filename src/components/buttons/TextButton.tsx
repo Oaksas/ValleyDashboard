@@ -22,11 +22,11 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
     return (
       <button
         ref={ref}
-        type='button'
+        type="button"
         disabled={buttonDisabled}
         className={cn(
           'button inline-flex items-center justify-center font-semibold',
-          'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
+          'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
           'transition duration-100',
           //#region  //*=========== Variant ===========
           variant === 'primary' && [

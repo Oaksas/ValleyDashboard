@@ -1,4 +1,4 @@
-import { Banner } from "@/app/types";
+import { Banner } from '@/app/types';
 
 export const getImageUrl = (item: Banner) => {
   if (typeof window !== 'undefined' && window.innerWidth < 768) {
