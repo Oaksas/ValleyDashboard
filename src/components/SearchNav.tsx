@@ -1,6 +1,11 @@
+'use client'
+import { useSearch } from '@/context/SearchcontextProvide';
 import React from 'react';
 
 const SearchNav: React.FC = () => {
+
+  const { searchTerm, setSearchTerm } = useSearch();
+
   return (
     <div>
       <form className='max-w-md mx-auto w-full'>
@@ -33,6 +38,8 @@ const SearchNav: React.FC = () => {
             id='default-search'
             className='block w-full px-4 ps-10 text-xm text-gray-900 border border-gray-300 rounded-md bg-gray-50 focus:ring-blue-500 focus:border-[#00D093] dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500'
             placeholder="if you're wondering whether to buy it or not,"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
             required
           />
         </div>

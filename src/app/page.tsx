@@ -14,6 +14,7 @@ import {
   getHotDealsData,
   getShortcutData,
 } from '@/app/util/store';
+import { SearchProvider } from '@/context/SearchcontextProvide';
 
 const HomePage = async () => {
   let Bannerdata: BannerCarouselProps | null;
@@ -35,28 +36,31 @@ const HomePage = async () => {
       <Head>
         <title>TesValley</title>
       </Head>
-      <div className="mx-1 md:mx-10 my-6">
-        <Navbar />
-        <hr />
-        {Bannerdata ? (
-          <ComponentPage data={Bannerdata} />
-        ) : (
-          <div className="error-message">
-            Error fetching data. Please try again later.
-          </div>
-        )}
-      </div>
-      <div className="mx-auto mt-3 flex w-11/12 flex-col justify-center lg:w-8/12">
-        {ShortcutData && <Hero data={ShortcutData} />}
-        {HotdealData && <Hotdeal data={HotdealData.items[0]} />}
-        {HotdealData?.items &&
-          HotdealData.items.length > 0 &&
-          HotdealData.items
-            .slice(1)
-            .map((item: any, index: number) => (
-              <OtherDeals key={index} data={item} />
-            ))}
-      </div>
+      <SearchProvider>
+        <div className="mx-1 md:mx-10 my-6">
+          <Navbar />
+          <hr />
+          {Bannerdata ? (
+            <ComponentPage data={Bannerdata} />
+          ) : (
+            <div className="error-message">
+              Error fetching data. Please try again later.
+            </div>
+          )}
+        </div>
+        <div className="mx-auto mt-3 flex w-11/12 flex-col justify-center lg:w-8/12">
+          {ShortcutData && <Hero data={ShortcutData} />}
+          {HotdealData && <Hotdeal data={HotdealData.items[0]} />}
+          {HotdealData?.items &&
+            HotdealData.items.length > 0 &&
+            HotdealData.items
+              .slice(1)
+              .map((item: any, index: number) => (
+                <OtherDeals key={index} data={item} />
+              ))}
+        </div>
+      </SearchProvider>
+
     </main>
   );
 };
