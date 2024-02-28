@@ -9,8 +9,8 @@ import SearchNav from '@/components/SearchNav';
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="my-4 flex items-center justify-between  md:gap-x-24 pb-2 md:justify-center ">
-      <div className="flex items-center justify-between md:justify-center gap-x-2">
+    <nav className="my-4 flex items-center justify-between  pb-2 md:justify-center md:gap-x-24 ">
+      <div className="flex items-center justify-between gap-x-2 md:justify-center">
         <NextImage
           useSkeleton
           className="w-28 md:w-36"
