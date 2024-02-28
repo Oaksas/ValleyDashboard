@@ -19,16 +19,16 @@ import { SearchProvider } from '@/context/SearchcontextProvide';
 const HomePage = async () => {
   let Bannerdata: BannerCarouselProps | null;
   let ShortcutData: MainShortcut[] | null;
-  let HotdealData: Deal | null;
+  let HotdealData: Deal[] | [];
 
   try {
     Bannerdata = await getBannerData();
     ShortcutData = await getShortcutData();
-    HotdealData = await getHotDealsData();
+    HotdealData = await getHotDealsData().then((res) => res.items);
   } catch (error) {
     Bannerdata = null;
     ShortcutData = null;
-    HotdealData = null;
+    HotdealData = [];
   }
 
   return (
@@ -51,10 +51,8 @@ const HomePage = async () => {
           </div>
           <div className="mx-auto mt-3 flex w-11/12 flex-col justify-center lg:w-8/12">
             {ShortcutData && <Hero data={ShortcutData} />}
-            {HotdealData && <Hotdeal data={HotdealData.items[0]} />}
-            {HotdealData?.items && HotdealData.items.length > 0 && (
-              <DealsFilter deals={HotdealData.items.slice(1)} />
-            )}
+            {HotdealData && <Hotdeal data={HotdealData[0]} />}
+            {HotdealData && <DealsFilter deals={HotdealData.slice(1)} />}
           </div>
         </SearchProvider>
       </main>

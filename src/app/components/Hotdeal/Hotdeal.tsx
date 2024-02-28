@@ -17,7 +17,6 @@ type HotdealProps = {
   data: Deal;
 };
 const Hotdeal: React.FC<HotdealProps> = ({ data }) => {
-  console.log('hot', data.media);
   return (
     <div className="mt-4 grid grid-cols-3 gap-6">
       <div className=" col-span-1 flex flex-col justify-between p-3">
