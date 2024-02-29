@@ -201,22 +201,22 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 30px; /* Adjust the width as needed */
-  height: 30px; /* Adjust the height as needed */
-  margin-top: 0; /* Adjust the margin-top to set the distance from the top */
+  width: 30px;
+  height: 30px; 
+  margin-top: 0; 
   opacity: 0.7;
 }
 
 .swiper-button-next {
   right: calc(
     100% / 5
-  ); /* Set the distance from the right to 1/3 of the parent */
+  ); 
 }
 
 .swiper-button-prev {
   left: calc(
     100% / 5
-  ); /* Set the distance from the left to 1/3 of the parent */
+  ); 
 }
 .mySwiper [class^='swiper-button-']::after {
   font-size: 20px;
