@@ -1,25 +1,26 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
 
-import OtherDeals from '@/app/components/OtherDeals/OtherDeals';
-import { Deal } from '@/app/types';
-import { useSearch } from '@/context/SearchcontextProvide';
+import OtherDeals from '@/app/components/OtherDeals/OtherDeals'
+import { Deal } from '@/app/types'
+import { useSearch } from '@/context/SearchcontextProvide'
 
 type DealsFilterProps = {
-  deals: Deal[];
-};
+  deals: Deal[]
+}
 export const DealsFilter: React.FC<DealsFilterProps> = ({ deals }) => {
-  let filteredData: any;
-  const { searchTerm } = useSearch();
+  let filteredData: Deal[] = []
+  const { searchTerm } = useSearch()
   if (searchTerm === '') {
-    filteredData = deals;
+    filteredData = deals
   } else {
     filteredData = deals.filter(
       (item) =>
         item?.type?.toLowerCase() === searchTerm.toLowerCase() ||
         item?.viewType?.toLowerCase() === searchTerm.toLowerCase(),
-    );
+    )
   }
+  console.log('filteredData', filteredData)
 
   return (
     <>
@@ -27,5 +28,5 @@ export const DealsFilter: React.FC<DealsFilterProps> = ({ deals }) => {
         <OtherDeals key={index} data={item} />
       ))}
     </>
-  );
-};
+  )
+}

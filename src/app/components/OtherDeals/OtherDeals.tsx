@@ -1,30 +1,30 @@
-'use client';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import React, { useEffect, useState } from 'react';
-import { Autoplay, Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+'use client'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import React, { useEffect, useState } from 'react'
+import { Autoplay, Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
-import '@/styles/globals.css';
+import '@/styles/globals.css'
 
-import ItemCard from '@/components/cards/ItemCard';
+import ItemCard from '@/components/cards/ItemCard'
 
-import { Publication } from '@/app/types';
+import { Publication } from '@/app/types'
 
 const OtherDeals: React.FC<any> = (data) => {
-  const [publication, setPublication] = useState<Publication>();
+  const [publication, setPublication] = useState<Publication>()
 
   useEffect(() => {
     if (data?.data?.items?.length > 0) {
-      setPublication(data?.data?.items[0].publication);
+      setPublication(data?.data?.items[0].publication)
     }
-  }, [data?.data?.items]);
+  }, [data?.data?.items])
 
   return (
-    <div className="mt-4 grid grid-cols-3 gap-6">
-      <div className=" col-span-1 flex flex-col justify-between p-3">
+    <div className="mt-4 grid grid-cols-3 gap-6  place-self-center">
+      <div className="col-span-full flex flex-col justify-between p-3 md:col-span-1">
         <div className="">
           <div className="mb-2 text-2xl font-semibold">{data?.data.title}</div>
           <div className="text-[12px] text-gray-500">
@@ -55,14 +55,14 @@ const OtherDeals: React.FC<any> = (data) => {
                 media={item}
                 description={data?.data.description}
                 rating={data?.data.rating}
-                publication={publication}
+                publication={data?.data?.items?.publication}
               />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default OtherDeals;
+export default OtherDeals

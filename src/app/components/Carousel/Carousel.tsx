@@ -1,25 +1,25 @@
-'use client';
-import React from 'react';
-import { Autoplay, Mousewheel, Navigation, Pagination } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+'use client'
+import React from 'react'
+import { Autoplay, Mousewheel, Navigation, Pagination } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
-import '@/styles/globals.css';
+import '@/styles/globals.css'
 
-import Loading from '@/components/Loading';
-import NextImage from '@/components/NextImage';
+import Loading from '@/components/Loading'
+import NextImage from '@/components/NextImage'
 
-import { Banner, BannerCarouselProps } from '@/app/types/index';
-import { getImageUrl } from '@/app/util';
+import { Banner, BannerCarouselProps } from '@/app/types/index'
+import { getImageUrl } from '@/app/util'
 
 const BannerCarousel: React.FC<BannerCarouselProps> = ({ data }) => {
   if (!data) {
-    return <Loading />;
+    return <Loading />
   }
   return (
-    <div className="h-3/4">
+    <div className="h-3/4 ">
       <Swiper
         slidesPerView={3}
         autoplay={{
@@ -50,7 +50,7 @@ const BannerCarousel: React.FC<BannerCarouselProps> = ({ data }) => {
         ))}
       </Swiper>
     </div>
-  );
-};
+  )
+}
 
-export default BannerCarousel;
+export default BannerCarousel

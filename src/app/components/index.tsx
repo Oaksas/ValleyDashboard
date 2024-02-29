@@ -1,15 +1,15 @@
-'use client';
-import clsx from 'clsx';
-import React from 'react';
+'use client'
+import clsx from 'clsx'
+import React from 'react'
 
-import BannerCarousel from '@/app/components/Carousel/Carousel';
+import BannerCarousel from '@/app/components/Carousel/Carousel'
 
-import { BannerCarouselProps } from '../types';
+import { BannerCarouselProps } from '../types'
 
-type Color = (typeof colorList)[number];
+type Color = (typeof colorList)[number]
 
 const ComponentPage: React.FC<BannerCarouselProps | any> = ({ data }) => {
-  const [mode, setMode] = React.useState<'dark' | 'light'>('light');
+  const [mode, setMode] = React.useState<'dark' | 'light'>('light')
 
   return (
     <main>
@@ -17,8 +17,8 @@ const ComponentPage: React.FC<BannerCarouselProps | any> = ({ data }) => {
         <BannerCarousel data={data} />
       </section>
     </main>
-  );
-};
+  )
+}
 
 const colorList = [
   'slate',
@@ -43,6 +43,6 @@ const colorList = [
   'fuchsia',
   'pink',
   'rose',
-] as const;
+] as const
 
-export default ComponentPage;
+export default ComponentPage

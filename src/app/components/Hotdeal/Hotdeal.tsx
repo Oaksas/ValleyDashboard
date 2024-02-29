@@ -1,25 +1,25 @@
-'use client';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
-import React from 'react';
-import { Autoplay, Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+'use client'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
+import React from 'react'
+import { Autoplay, Navigation } from 'swiper/modules'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
 
-import '@/styles/globals.css';
+import '@/styles/globals.css'
 
-import ItemCard from '@/components/cards/ItemCard';
+import ItemCard from '@/components/cards/ItemCard'
 
-import { Deal } from '@/app/types';
+import { Deal } from '@/app/types'
 
 type HotdealProps = {
-  data: Deal;
-};
+  data: Deal
+}
 const Hotdeal: React.FC<HotdealProps> = ({ data }) => {
   return (
-    <div className="mt-4 grid grid-cols-3 gap-6">
-      <div className=" col-span-1 flex flex-col justify-between p-3">
+    <div className="mt-4 grid grid-cols-3 gap-6 ">
+      <div className="col-span-full flex flex-col justify-between p-3 md:col-span-1">
         <div className="">
           <div className="mb-2 text-2xl font-semibold">Hot Deal</div>
           <div className="text-sm text-gray-500">HAPPY HOUR</div>
@@ -55,7 +55,7 @@ const Hotdeal: React.FC<HotdealProps> = ({ data }) => {
         </Swiper>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Hotdeal;
+export default Hotdeal

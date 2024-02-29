@@ -1,16 +1,16 @@
-'use client';
-import React from 'react';
-import { FaStar } from 'react-icons/fa';
+'use client'
+import React from 'react'
+import { FaStar } from 'react-icons/fa'
 
-import NextImage from '@/components/NextImage';
+import NextImage from '@/components/NextImage'
 
-import { Publication } from '@/app/types';
+import { Publication } from '@/app/types'
 
 interface ItemCardProps {
-  media: any;
-  publication?: Publication;
-  rating: number;
-  description?: string;
+  media: any
+  publication?: Publication | undefined
+  rating: number
+  description?: string
 }
 
 const ItemCard: React.FC<ItemCardProps> = ({
@@ -19,6 +19,8 @@ const ItemCard: React.FC<ItemCardProps> = ({
   rating,
   description,
 }) => {
+  if (publication) console.log('dd', publication)
+
   return (
     <div className="m-2 max-w-sm rounded-lg bg-white shadow dark:border-gray-700 dark:bg-gray-800">
       <NextImage
@@ -49,7 +51,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ItemCard;
+export default ItemCard

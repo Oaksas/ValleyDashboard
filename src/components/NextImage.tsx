@@ -1,21 +1,21 @@
-'use client';
-import Image, { ImageProps } from 'next/image';
-import * as React from 'react';
+'use client'
+import Image, { ImageProps } from 'next/image'
+import * as React from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
 type NextImageProps = {
-  useSkeleton?: boolean;
+  useSkeleton?: boolean
   classNames?: {
-    image?: string;
-    blur?: string;
-  };
-  alt: string;
+    image?: string
+    blur?: string
+  }
+  alt: string
 } & (
   | { width: string | number; height: string | number }
   | { layout: 'fill'; width?: string | number; height?: string | number }
 ) &
-  ImageProps;
+  ImageProps
 
 /**
  *
@@ -34,8 +34,8 @@ export default function NextImage({
 }: NextImageProps) {
   const [status, setStatus] = React.useState(
     useSkeleton ? 'loading' : 'complete',
-  );
-  const widthIsSet = className?.includes('w-') ?? false;
+  )
+  const widthIsSet = className?.includes('w-') ?? false
 
   return (
     <figure
@@ -55,5 +55,5 @@ export default function NextImage({
         {...rest}
       />
     </figure>
-  );
+  )
 }
