@@ -224,13 +224,9 @@
 }
 
 .mySwiper .swiper-button-next {
-  right: calc(
-    100% / 5
-  ) !important; 
+  right: calc(100% / 5) !important; 
 }
 
 .mySwiper .swiper-button-prev {
-  left: calc(
-    100% / 5
-  ) !important; 
+  left: calc(100% / 5) !important; 
 }
