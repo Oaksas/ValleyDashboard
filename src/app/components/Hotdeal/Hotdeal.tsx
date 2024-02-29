@@ -21,7 +21,7 @@ const Hotdeal: React.FC<HotdealProps> = ({ data }) => {
     <div className="mt-4 grid grid-cols-3 gap-6">
       <div className=" col-span-1 flex flex-col justify-between p-3">
         <div className="">
-          <div className="mb-2 text-2xl">Hot Deal</div>
+          <div className="mb-2 text-2xl font-semibold">Hot Deal</div>
           <div className="text-sm text-gray-500">HAPPY HOUR</div>
         </div>
 
@@ -47,7 +47,7 @@ const Hotdeal: React.FC<HotdealProps> = ({ data }) => {
               <ItemCard
                 media={item}
                 description={data.description}
-                rating={item.rating}
+                rating={data.rating}
                 publication={data.items[0]?.publication}
               />
             </SwiperSlide>

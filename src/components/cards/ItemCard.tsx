@@ -45,7 +45,7 @@ const ItemCard: React.FC<ItemCardProps> = ({
         <div className="flex items-center text-[15px] text-gray-400 dark:text-gray-300">
           <FaStar />
 
-          {rating > 0 && <span className="">{rating}</span>}
+          <span className="">{rating}</span>
         </div>
       </div>
     </div>
