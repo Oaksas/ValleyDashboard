@@ -199,24 +199,12 @@
 .swiper-button-prev {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   width: 30px;
   height: 30px; 
   margin-top: 0; 
   opacity: 0.7;
 }
 
-.swiper-button-next {
-  right: calc(
-    100% / 5
-  ); 
-}
-
-.swiper-button-prev {
-  left: calc(
-    100% / 5
-  ); 
-}
 .mySwiper [class^='swiper-button-']::after {
   font-size: 20px;
 }
@@ -233,4 +221,16 @@
   font-size: 24px;
   width: 40px;
   height: 40px;
+}
+
+.mySwiper .swiper-button-next {
+  right: calc(
+    100% / 5
+  ) !important; 
+}
+
+.mySwiper .swiper-button-prev {
+  left: calc(
+    100% / 5
+  ) !important; 
 }
