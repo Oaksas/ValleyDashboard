@@ -200,8 +200,8 @@
   position: absolute;
   top: 50%;
   width: 30px;
-  height: 30px; 
-  margin-top: 0; 
+  height: 30px;
+  margin-top: 0;
   opacity: 0.7;
 }
 
@@ -224,9 +224,15 @@
 }
 
 .mySwiper .swiper-button-next {
-  right: calc(100% / 5) !important; 
+  right: calc(100% / 5) !important;
 }
 
 .mySwiper .swiper-button-prev {
-  left: calc(100% / 5) !important; 
+  left: calc(100% / 5) !important;
+}
+
+@media screen and (max-width: 767px) {
+  .swiper-slide img {
+    height: 100px;
+  }
 }
