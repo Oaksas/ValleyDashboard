@@ -222,7 +222,7 @@
 }
 
 .swiper-pagination-bullet-active {
-  background-color: white;
+  background-color: white !important;
 }
 
 .mySwiper .swiper-button-next,
