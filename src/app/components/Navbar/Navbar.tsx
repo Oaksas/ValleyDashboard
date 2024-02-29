@@ -1,11 +1,11 @@
-'use client';
+'use client'
 
-import React from 'react';
+import React from 'react'
 
-import Hamburger from '@/components/buttons/Hamburger';
-import TextButton from '@/components/buttons/TextButton';
-import NextImage from '@/components/NextImage';
-import SearchNav from '@/components/SearchNav';
+import Hamburger from '@/components/buttons/Hamburger'
+import TextButton from '@/components/buttons/TextButton'
+import NextImage from '@/components/NextImage'
+import SearchNav from '@/components/SearchNav'
 
 const Navbar: React.FC = () => {
   return (
@@ -81,7 +81,7 @@ const Navbar: React.FC = () => {
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

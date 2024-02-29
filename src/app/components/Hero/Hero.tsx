@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
-import NextImage from '@/components/NextImage';
+import NextImage from '@/components/NextImage'
 
-import { MainShortcut } from '@/app/types';
+import { MainShortcut } from '@/app/types'
 
 type MainShortcutProps = {
-  data: MainShortcut[];
-};
+  data: MainShortcut[]
+}
 
 const Hero: React.FC<MainShortcutProps> = ({ data }) => {
   return (
@@ -24,10 +24,10 @@ const Hero: React.FC<MainShortcutProps> = ({ data }) => {
             />{' '}
             <p className="text-xs">{item.title}</p>
           </div>
-        );
+        )
       })}
     </div>
-  );
-};
+  )
+}
 
-export default Hero;
+export default Hero

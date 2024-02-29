@@ -1,12 +1,12 @@
-import { LucideIcon } from 'lucide-react';
-import * as React from 'react';
-import { IconType } from 'react-icons';
+import { LucideIcon } from 'lucide-react'
+import * as React from 'react'
+import { IconType } from 'react-icons'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
 import UnstyledLink, {
   UnstyledLinkProps,
-} from '@/components/links/UnstyledLink';
+} from '@/components/links/UnstyledLink'
 
 const ButtonLinkVariant = [
   'primary',
@@ -14,20 +14,20 @@ const ButtonLinkVariant = [
   'ghost',
   'light',
   'dark',
-] as const;
-const ButtonLinkSize = ['sm', 'base'] as const;
+] as const
+const ButtonLinkSize = ['sm', 'base'] as const
 
 type ButtonLinkProps = {
-  isDarkBg?: boolean;
-  variant?: (typeof ButtonLinkVariant)[number];
-  size?: (typeof ButtonLinkSize)[number];
-  leftIcon?: IconType | LucideIcon;
-  rightIcon?: IconType | LucideIcon;
+  isDarkBg?: boolean
+  variant?: (typeof ButtonLinkVariant)[number]
+  size?: (typeof ButtonLinkSize)[number]
+  leftIcon?: IconType | LucideIcon
+  rightIcon?: IconType | LucideIcon
   classNames?: {
-    leftIcon?: string;
-    rightIcon?: string;
-  };
-} & UnstyledLinkProps;
+    leftIcon?: string
+    rightIcon?: string
+  }
+} & UnstyledLinkProps
 
 const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
   (
@@ -139,8 +139,8 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           </div>
         )}
       </UnstyledLink>
-    );
+    )
   },
-);
+)
 
-export default ButtonLink;
+export default ButtonLink

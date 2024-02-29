@@ -1,28 +1,28 @@
 /* eslint-disable @typescript-eslint/ban-types */
-'use client';
-import React, { Component, ErrorInfo, ReactNode } from 'react';
+'use client'
+import React, { Component, ErrorInfo, ReactNode } from 'react'
 
 interface ErrorBoundaryProps {
-  children: ReactNode;
+  children: ReactNode
 }
 
 interface ErrorBoundaryState {
-  hasError: boolean;
+  hasError: boolean
 }
 
 class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
-    super(props);
-    this.state = { hasError: false };
+    super(props)
+    this.state = { hasError: false }
   }
 
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true };
+    return { hasError: true }
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo): void {
     // You can log the error to an error reporting service
-    console.error('Error caught by error boundary:', error, errorInfo);
+    console.error('Error caught by error boundary:', error, errorInfo)
   }
 
   render(): ReactNode {
@@ -31,11 +31,11 @@ class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundaryState> {
         <div className="error-message">
           Something went wrong. Please try again later.
         </div>
-      );
+      )
     }
 
-    return this.props.children;
+    return this.props.children
   }
 }
 
-export default ErrorBoundary;
+export default ErrorBoundary

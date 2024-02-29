@@ -1,6 +1,6 @@
-import flowbite from 'flowbite/plugin';
-import type { Config } from 'tailwindcss';
-import defaultTheme from 'tailwindcss/defaultTheme';
+import flowbite from 'flowbite/plugin'
+import type { Config } from 'tailwindcss'
+import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default {
   content: [
@@ -57,4 +57,4 @@ export default {
     },
   },
   plugins: [require('@tailwindcss/forms'), flowbite],
-} satisfies Config;
+} satisfies Config

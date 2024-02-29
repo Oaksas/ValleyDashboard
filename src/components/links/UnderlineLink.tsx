@@ -1,10 +1,10 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
 import UnstyledLink, {
   UnstyledLinkProps,
-} from '@/components/links/UnstyledLink';
+} from '@/components/links/UnstyledLink'
 
 const UnderlineLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
   ({ children, className, ...rest }, ref) => {
@@ -21,8 +21,8 @@ const UnderlineLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
       >
         {children}
       </UnstyledLink>
-    );
+    )
   },
-);
+)
 
-export default UnderlineLink;
+export default UnderlineLink

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Loading: React.FC = () => {
   return (
@@ -23,7 +23,7 @@ const Loading: React.FC = () => {
         <span className="sr-only">Loading...</span>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Loading;
+export default Loading

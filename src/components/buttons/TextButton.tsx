@@ -1,12 +1,12 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-const TextButtonVariant = ['primary', 'basic'] as const;
+const TextButtonVariant = ['primary', 'basic'] as const
 
 type TextButtonProps = {
-  variant?: (typeof TextButtonVariant)[number];
-} & React.ComponentPropsWithRef<'button'>;
+  variant?: (typeof TextButtonVariant)[number]
+} & React.ComponentPropsWithRef<'button'>
 
 const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
   (
@@ -45,8 +45,8 @@ const TextButton = React.forwardRef<HTMLButtonElement, TextButtonProps>(
       >
         {children}
       </button>
-    );
+    )
   },
-);
+)
 
-export default TextButton;
+export default TextButton

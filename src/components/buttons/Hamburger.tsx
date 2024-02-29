@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Hamburger: React.FC = () => {
   return (
@@ -18,7 +18,7 @@ const Hamburger: React.FC = () => {
         />
       </svg>
     </div>
-  );
-};
+  )
+}
 
-export default Hamburger;
+export default Hamburger

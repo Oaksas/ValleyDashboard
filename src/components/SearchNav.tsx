@@ -1,9 +1,9 @@
-'use client';
-import { useSearch } from '@/context/SearchcontextProvide';
-import React from 'react';
+'use client'
+import { useSearch } from '@/context/SearchcontextProvide'
+import React from 'react'
 
 const SearchNav: React.FC = () => {
-  const { searchTerm, setSearchTerm } = useSearch();
+  const { searchTerm, setSearchTerm } = useSearch()
 
   return (
     <div>
@@ -44,7 +44,7 @@ const SearchNav: React.FC = () => {
         </div>
       </form>
     </div>
-  );
-};
+  )
+}
 
-export default SearchNav;
+export default SearchNav

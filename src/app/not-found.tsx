@@ -1,10 +1,10 @@
-import { Metadata } from 'next';
-import * as React from 'react';
-import { RiAlarmWarningFill } from 'react-icons/ri';
+import { Metadata } from 'next'
+import * as React from 'react'
+import { RiAlarmWarningFill } from 'react-icons/ri'
 
 export const metadata: Metadata = {
   title: 'Not Found',
-};
+}
 
 export default function NotFound() {
   return (
@@ -20,5 +20,5 @@ export default function NotFound() {
         </div>
       </section>
     </main>
-  );
+  )
 }

@@ -1,15 +1,15 @@
-import * as React from 'react';
+import * as React from 'react'
 
-import { cn } from '@/lib/utils';
+import { cn } from '@/lib/utils'
 
-import UnderlineLink from '@/components/links/UnderlineLink';
-import { UnstyledLinkProps } from '@/components/links/UnstyledLink';
+import UnderlineLink from '@/components/links/UnderlineLink'
+import { UnstyledLinkProps } from '@/components/links/UnstyledLink'
 
 type ArrowLinkProps<C extends React.ElementType> = {
-  as?: C;
-  direction?: 'left' | 'right';
+  as?: C
+  direction?: 'left' | 'right'
 } & UnstyledLinkProps &
-  React.ComponentProps<C>;
+  React.ComponentProps<C>
 
 export default function ArrowLink<C extends React.ElementType>({
   children,
@@ -18,7 +18,7 @@ export default function ArrowLink<C extends React.ElementType>({
   as,
   ...rest
 }: ArrowLinkProps<C>) {
-  const Component = as || UnderlineLink;
+  const Component = as || UnderlineLink
 
   return (
     <Component
@@ -60,5 +60,5 @@ export default function ArrowLink<C extends React.ElementType>({
         />
       </svg>
     </Component>
-  );
+  )
 }
